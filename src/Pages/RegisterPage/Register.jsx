@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "../../style/ResetPasswordStyle.css";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../Contexts/AuthContextProvider";
+import style from "../../Styles/Register.module.scss";
 
-const ResetPassword = () => {
-  const navigate = useNavigate();
+//?MUI
 
+import { useAuth } from "../../Components/Contexts/AuthContextProvider";
+import { Link, useNavigate } from "react-router-dom";
+
+const Register = () => {
   //?CUSTOM
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
@@ -27,7 +28,7 @@ const ResetPassword = () => {
 
   //? function for checking of users focus on input
 
-  const blurHandler = (e) => {
+  const blurHandler = e => {
     switch (e.target.name) {
       case "email":
         setEmailDirty(true);
@@ -103,35 +104,35 @@ const ResetPassword = () => {
     RegisterUser(formData, email);
   }
 
+  const navigate = useNavigate();
+
   return (
-    <>
-      <div className="resetBlock_main">
-        <h3 className="resetBlock_title">Сброс Пароля</h3>
-        <div className="input_block">
+    <div className={style.parent}>
+      <div className={style.container}>
+        <h1>Регистрирация</h1>
+        <div className={style.input_block}>
           <div>
             <label>{emailDirty && emailError ? emailError : null}</label>
           </div>
           <input
-            className="resetBlock_inp inputLogin"
             type="text"
             value={email}
             name="email"
-            placeholder="Введите логин"
-            onChange={(e) => handleEmail(e)}
-            onBlur={(e) => blurHandler(e)}
+            placeholder="Введите почту"
+            onChange={e => handleEmail(e)}
+            onBlur={e => blurHandler(e)}
             style={emailDirty && emailError ? { border: "2px solid red" } : {}}
           />
           <div>
             <label>{passDirty && passError ? passError : null}</label>
           </div>
           <input
-            className="resetBlock_inp inputPass"
             value={pass}
             name="password"
             type="password"
+            onChange={e => handlePassword(e)}
+            onBlur={e => blurHandler(e)}
             placeholder="Введите пароль"
-            onChange={(e) => handlePassword(e)}
-            onBlur={(e) => blurHandler(e)}
             style={passDirty && passError ? { border: "2px solid red" } : {}}
           />
           <div>
@@ -140,37 +141,40 @@ const ResetPassword = () => {
             </label>
           </div>
           <input
-            className="resetBlock_inp inputConPass"
             type="password"
             value={passConf}
             name="password confirm"
-            placeholder="Повторите пароль"
-            onChange={(e) => handlePassConfirm(e)}
-            onBlur={(e) => blurHandler(e)}
+            onChange={e => handlePassConfirm(e)}
+            onBlur={e => blurHandler(e)}
+            placeholder="Подтвердите пароль"
             style={
               passConfDirty && passConfError ? { border: "2px solid red" } : {}
             }
           />
+          <button
+            disabled={!formValid}
+            style={formValid ? {} : { opacity: "0.5", cursor: "not-allowed" }}
+            onClick={() => createUser()}>
+            Зарегистрироваться
+          </button>
         </div>
-        <button
-          className="resetBlock_btn"
-          disabled={!formValid}
-          style={formValid ? {} : { opacity: "0.5", cursor: "not-allowed" }}
-          onClick={() => createUser()}>
-          Подтвердить
-        </button>
-        <h6 className="resetBlock_info">
-          Уже есть аккаунт?
-          <a
-            onClick={() => navigate("/login")}
-            className="resetBlock_link"
-            href="">
-            Войти
-          </a>
-        </h6>
+        <div className={style.block2}>
+          <p>или зарегистрируйтесь через</p>
+          <div className={style.icons_block}>
+            <button>
+              <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" />
+            </button>
+            <button className={style.button2}>
+              <img src="https://seeklogo.com/images/F/facebook-icon-logo-AEF3A8F447-seeklogo.com.png" />
+            </button>
+          </div>
+          <h5>
+            Уже есть аккаунт?<Link to="/login">Войти</Link>
+          </h5>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default ResetPassword;
+export default Register;
