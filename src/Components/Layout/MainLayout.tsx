@@ -1,7 +1,18 @@
-import React from "react";
+import React from 'react'
+import Footer from './Footer'
+import Header from './Header'
 
-function MainLayout() {
-  return <div>MainLayout</div>;
+type Props = {
+  children: React.ReactNode;
+}
+
+function MainLayout({children}: Props) {
+  return (
+    <>
+        {children}
+        <Footer/>
+    </>
+  )
 }
 
 export default MainLayout;

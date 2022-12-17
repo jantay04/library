@@ -1,20 +1,31 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "./Components/Footer/Footer";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Home from "./Pages/Home";
-import Login from "./Pages/LoginPage/Login";
-import Register from "./Pages/RegisterPage/Register";
+import PersonalArea from "./Pages/PersonalArea";
+
+
+const theme = createTheme({
+  palette: {
+    secondary: {
+      main: '#FF7F2C',
+      contrastText: "#fff" 
+      
+    },
+  },
+});
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/footer" element={<Footer />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/personalarea" element={<PersonalArea />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

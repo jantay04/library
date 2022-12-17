@@ -1,14 +1,14 @@
 import React from "react";
-import Footer from "../../Components/Footer/Footer";
+import MainLayout from '../../Components/Layout/MainLayout'
 
 type Props = {};
 
 function Home({}: Props) {
   return (
-    <div>
-      <Footer />
-    </div>
-  );
+    <MainLayout>
+        Home
+    </MainLayout>
+  )
 }
 
 export default Home;
