@@ -3,7 +3,7 @@ import React from "react";
 type Props = {};
 
 function Auth({}: Props) {
-  return <div>Auth</div>;
+  return <div> </div>;
 }
 
 export default Auth;

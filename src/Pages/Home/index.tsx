@@ -1,9 +1,14 @@
 import React from "react";
+import Footer from "../../Components/Footer/Footer";
 
 type Props = {};
 
 function Home({}: Props) {
-  return <div>Home page</div>;
+  return (
+    <div>
+      <Footer />
+    </div>
+  );
 }
 
 export default Home;
