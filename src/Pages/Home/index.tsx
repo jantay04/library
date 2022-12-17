@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react";
+import Footer from "../../Components/Footer/Footer";
 
-type Props = {}
+type Props = {};
 
 function Home({}: Props) {
   return (
     <div>
-        Home
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
