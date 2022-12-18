@@ -6,11 +6,14 @@ type Props = {
   children: React.ReactNode;
 }
 
-function MainLayout({children}: Props) {
+function MainLayout({ children }: Props) {
   return (
     <>
+      <Header />
+      <main className='min-h-[70vh]'>
         {children}
-        <Footer/>
+      </main>
+      <Footer />
     </>
   )
 }

@@ -122,6 +122,7 @@ const Login = () => {
             onClick={() => createUserForLogin()}>
             Войти
           </button>
+          
         </div>
         <div className={style.block2}>
           <p>или</p>

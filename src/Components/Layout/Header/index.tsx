@@ -1,10 +1,12 @@
-import React from "react";
+import { Fragment, useState } from "react";
 import logoSvg from "../../assets/logo.svg";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
 import { Button, IconButton } from "@mui/material";
+import { Dialog, Transition } from "@headlessui/react";
+import HeaderModal from "./HeaderModal";
 
 type Props = {};
 
@@ -26,9 +28,9 @@ const linksLists = [
   },
 ];
 
-function Header({}: Props) {
+function Header({ }: Props) {
   const SearchComponent = () => {
-    const [search, setSearch] = React.useState("");
+    const [search, setSearch] = useState("");
     return (
       <label className="xl:w-96 relative">
         <SearchIcon className="absolute top-[8px] left-[10px] cursor-pointer h-6 w-6 " />
@@ -59,6 +61,8 @@ function Header({}: Props) {
     );
   };
 
+  let [isOpen, setIsOpen] = useState(true);
+
   return (
     <div className="">
       <div className="max-w-7xl mx-auto p-4">
@@ -78,11 +82,12 @@ function Header({}: Props) {
                 </Link>
               ))}
           </div>
-          <button className="bg-[#FF7F2C] py-2 px-4 rounded text-white font-semibold shadow-lg hover:bg-[#f96807] ease-in-out duration-200">
+          <button onClick={() => setIsOpen(true)} className="bg-[#FF7F2C] py-2 px-4 rounded text-white font-semibold shadow-lg hover:bg-[#f96807] ease-in-out duration-200">
             Войти
           </button>
         </div>
       </div>
+      <HeaderModal  isOpen={isOpen}  setIsOpen={setIsOpen}  />
     </div>
   );
 }

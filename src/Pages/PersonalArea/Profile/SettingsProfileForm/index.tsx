@@ -1,20 +1,20 @@
 import { TextField, Button } from "@mui/material";
 import React from "react";
-import * as Yup from 'yup'
-import {Formik, Form} from 'formik'
+// import * as Yup from 'yup'
+// import {Formik, Form} from 'formik'
 
 type Props = {};
 
 const INITIAL_FORM_STATE = {};
 
-const FORM_VALIDATION = Yup.object().shape({
+// const FORM_VALIDATION = Yup.object().shape({
 
-})
+// })
 
 function SettingsProfileForm({}: Props) {
   return (
     <div>
-      <div className="grid grid-cols-12 gap-10">
+      {/* <div className="grid grid-cols-12 gap-10">
         <div className="col-span-3">
           <h2>Личная информация</h2>
         </div>
@@ -79,7 +79,7 @@ function SettingsProfileForm({}: Props) {
         <Button variant="contained" sx={{ textTransform: "capitalize" }}>
           Сохранить изменения
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 }
