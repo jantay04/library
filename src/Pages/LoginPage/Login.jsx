@@ -23,7 +23,7 @@ const Login = () => {
 
   const { LoginUser } = useAuth();
 
-  const blurHandler = e => {
+  const blurHandler = (e) => {
     switch (e.target.name) {
       case "email":
         setEmailDirty(true);
@@ -97,8 +97,8 @@ const Login = () => {
             value={email}
             name="email"
             placeholder="Введите почту"
-            onChange={e => handleEmail(e)}
-            onBlur={e => blurHandler(e)}
+            onChange={(e) => handleEmail(e)}
+            onBlur={(e) => blurHandler(e)}
             style={emailDirty && emailError ? { border: "2px solid red" } : {}}
           />
           <div>
@@ -108,13 +108,13 @@ const Login = () => {
             value={pass}
             name="password"
             type="password"
-            onChange={e => handlePassword(e)}
-            onBlur={e => blurHandler(e)}
+            onChange={(e) => handlePassword(e)}
+            onBlur={(e) => blurHandler(e)}
             placeholder="Введите пароль"
             style={passDirty && passError ? { border: "2px solid red" } : {}}
           />
           <div className={style.forgotPassword_block}>
-            <Link to="#">Забыли пароль?</Link>
+            <Link to="/resetpass">Забыли пароль?</Link>
           </div>
           <button
             disabled={!formValid}
