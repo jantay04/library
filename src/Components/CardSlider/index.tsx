@@ -11,7 +11,7 @@ type Props = {};
 const MainSlider = ({}: Props) => {
   const settings = {
     className: "ml-56 ",
-    slidesToShow: 7,
+    slidesToShow: 6,
     infinite: true,
     speed: 500,
     responsive: [
@@ -60,7 +60,7 @@ const MainSlider = ({}: Props) => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           className: "ml-12 ",
         },
       },
