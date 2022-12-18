@@ -6,9 +6,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from "@mui/material/IconButton/IconButton";
 
 type Props = {
-  isOpen: boolean,
-  setIsOpen: any
-}
+  isOpen: boolean;
+  setIsOpen: any;
+};
 
 function HeaderModal({ isOpen, setIsOpen }: Props) {
   // let [isOpen, setIsOpen] = useState(true);
@@ -31,8 +31,7 @@ function HeaderModal({ isOpen, setIsOpen }: Props) {
           enterTo="opacity-100"
           leave="ease-in duration-200"
           leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
+          leaveTo="opacity-0">
           <div className="fixed inset-0 bg-black bg-opacity-25" />
         </Transition.Child>
         <div className="fixed inset-0 overflow-y-auto">
@@ -60,7 +59,7 @@ function HeaderModal({ isOpen, setIsOpen }: Props) {
         </div>
       </Dialog>
     </Transition>
-  )
+  );
 }
 
-export default HeaderModal
+export default HeaderModal;

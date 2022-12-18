@@ -1,0 +1,17 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20" width="22" height="20">
+	<title>like-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M0.57 0L22 0L22 20L0.57 20L0.57 0Z" />
+		</clipPath>
+		<image  width="19" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAAAXNSR0IB2cksfwAAAE5QTFRFAAAA+QgI+gkJ+QkJ+gkJ+gkJ+QgI+gkJ+QkJ+gkJ+gkJ+QkJ+QkJ+gkJ+QgI+QkJ+gkJ+QgI+gkJ+QkJ+gkJ+QgI+gkJ+QkJ+gkJ+QkJRkoFnwAAABp0Uk5TABBvr7+fQI8w3//v6JBwoECAMGDw4IDA0FCjHzT6AAAAbUlEQVR4nGWOCQ6AIAwEt4qo9cADr/9/1CJGsU5CtpkAWwCU5aawIY0pJYWq5oCxzZW5KIpjpJXTAT1rAPdzA8afmzBr5aVkUW4Nu3DazNu14Of1Trhlo1UiXwUcPv6VKCnyctXhC+3cQ0P2GU8QAAiZivj53QAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<g id="Layer">
+			<use id="Layer" href="#img1" x="2" y="2" />
+		</g>
+	</g>
+</svg>
