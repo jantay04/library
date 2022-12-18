@@ -32,21 +32,27 @@ const Card = (props: Props) => {
   return (
     <div>
       <div>
-        <img src={book} alt="" />
-        <div className="flex flex-row justify-between">
-          <StyledRating
-            className="mt-2"
-            name="customized-color"
-            defaultValue={2}
-            getLabelText={(value: number) =>
-              `${value} Star${value !== 1 ? "s" : ""}`
-            }
-            precision={0.5}
-            readOnly
-          />
-          <button className="mr-10" onClick={() => setLike(!isLike)}>
-            {isLike ? <img src={LikeFill} alt="" /> : <img src={Like} alt="" />}
-          </button>
+        <div className="flex flex-col justify-between h-auto w-52">
+          <img className="mr-0" src={book} alt="" />
+          <div className="flex justify-between">
+            <StyledRating
+              className="mt-2"
+              name="customized-color"
+              defaultValue={2}
+              getLabelText={(value: number) =>
+                `${value} Star${value !== 1 ? "s" : ""}`
+              }
+              precision={0.5}
+              readOnly
+            />
+            <button className="mr-2" onClick={() => setLike(!isLike)}>
+              {isLike ? (
+                <img src={LikeFill} alt="" />
+              ) : (
+                <img src={Like} alt="" />
+              )}
+            </button>
+          </div>
         </div>
 
         <h3 className="text-ourBlue font-bold">

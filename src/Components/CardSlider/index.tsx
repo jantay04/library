@@ -10,19 +10,78 @@ type Props = {};
 
 const MainSlider = ({}: Props) => {
   const settings = {
-    className: "center",
+    className: "ml-56 ",
+    slidesToShow: 7,
     infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 5,
-    swipeToSlide: true,
-    // afterChange: function (index) {
-    //   console.log(
-    //     `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-    //   );
-    // },
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 6,
+          className: "ml-44 ",
+        },
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 5,
+          className: "ml-32 ",
+        },
+      },
+      {
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 4,
+          className: "ml-20 ",
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          className: "ml-24 ",
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          className: "ml-20 ",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          className: "ml-16 ",
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          className: "ml-12 ",
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          className: "ml-24 mr-1",
+        },
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          className: "mx-12 ",
+        },
+      },
+    ],
   };
   return (
-    <div className="ml-32 mb-10">
+    <div className="mb-10">
       <Slider {...settings}>
         <Card />
         <Card />
