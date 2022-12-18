@@ -4,6 +4,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import HistoryIcon from "@mui/icons-material/History";
 import Profile from "./Profile";
+import PersonalSidebarLayout from "../../Components/PersonalAreaLayout";
 
 type Props = {};
 
@@ -40,17 +41,23 @@ function a11yProps(index: number) {
   };
 }
 
-function PersonalArea({}: Props) {
+function PersonalArea({ }: Props) {
   // const [value, setValue] = React.useState(0);
 
   // const handleChange = (event: React.SyntheticEvent, newValue: number) => {
   //   setValue(newValue);
   // };
 
+
+
   return (
-    <div className="max-w-6xl mx-auto p-8  my-20 min-h-screen border shadow-lg rounded-lg">
-      <>
-        {/* <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+    <div className=" flex h-screen">
+        <PersonalSidebarLayout>
+          grefew
+        </PersonalSidebarLayout>
+
+        <>
+          {/* <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             value={value}
             onChange={handleChange}
@@ -86,7 +93,7 @@ function PersonalArea({}: Props) {
             />
           </Tabs>
         </Box> */}
-        {/* <TabPanel value={value} index={0}>
+          {/* <TabPanel value={value} index={0}>
          <Profile/>
         </TabPanel>
         <TabPanel value={value} index={1}>
@@ -95,7 +102,7 @@ function PersonalArea({}: Props) {
         <TabPanel value={value} index={2} >
           Item Three
         </TabPanel> */}
-      </>
+        </>
     </div>
   );
 }

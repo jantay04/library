@@ -1,8 +1,9 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import Register from "../../../../Pages/RegisterPage/Register";
-import Login from "../../../../Pages/LoginPage/Login";
 import { Link } from "react-router-dom";
+import LoginAndRegister from "../../../LoginAndRegister";
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from "@mui/material/IconButton/IconButton";
 
 type Props = {
   isOpen: boolean,
@@ -45,12 +46,14 @@ function HeaderModal({ isOpen, setIsOpen }: Props) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="transform overflow-hidden rounded-xl bg-white max-sm:p-3 p-6 text-left align-middle shadow-xl transition-all">
-                <Link to='/personalarea'>
-                  Личный кабинет
-                </Link>
-                <Register />
-                <Login />
+              <Dialog.Panel className="relative transform overflow-hidden rounded-xl bg-white max-sm:p-3  p-10 text-left align-middle shadow-xl transition-all">
+                
+                <div className="absolute top-2 right-2">
+                  <IconButton onClick={closeModal} aria-label="delete" size="small">
+                    <CloseIcon />
+                  </IconButton>
+                </div>
+                <LoginAndRegister />
               </Dialog.Panel>
             </Transition.Child>
           </div>
