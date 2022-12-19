@@ -1,7 +1,11 @@
 import React from "react";
-import MainLayout from '../../Components/Layout/MainLayout'
+import MainLayout from "../../Components/Layout/MainLayout";
 import MainSections from "../../Components/MainSectoins";
 import CardSlider from "../../Components/CardSlider";
+import SecondSection from "../../Components/SecondSection";
+import ThirdSection from "../../Components/ThirdSection";
+import FourthSection from "../../Components/FourthSection";
+
 type Props = {};
 
 function Home({}: Props) {
@@ -9,6 +13,9 @@ function Home({}: Props) {
     <MainLayout>
       <MainSections />
       <CardSlider />
+      <SecondSection />
+      <ThirdSection />
+      <FourthSection />
     </MainLayout>
   );
 }
