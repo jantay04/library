@@ -7,7 +7,7 @@ type Props = {};
 const ProfileCard = (props: Props) => {
   return (
     <>
-      <div className="flex flex-row lg:w-700 xl:bg-slate-800 xl:w-500 lg:bg-amber-700 items-center">
+      <div className="flex flex-row lg:w-700 xl:w-500 items-center">
         <img src={profilePic} alt="" />
         <div className="ml-4">
           <h3 className="text-ourBlue text-lg font-normal">Роман Иванов</h3>
