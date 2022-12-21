@@ -16,6 +16,9 @@ module.exports = {
       colors: {
         bejeviy: "#FEF7E8",
         ourBlue: "#1D324E",
+        ourOrange: "#FF7F2C",
+        gray1ForGradient: "#E5E8EE",
+        gray2ForGradient: "#F7F8FA",
       },
       minWidth: {
         lg: "1024px",

@@ -1,14 +1,10 @@
-import React from 'react'
-import PersonalSidebarLayout from '../../../Components/PersonalAreaLayout'
+import React from "react";
+import PersonalSidebarLayout from "../../../Components/PersonalAreaLayout";
 
-type Props = {}
+type Props = {};
 
-function Book({ }: Props) {
-    return (
-        <PersonalSidebarLayout>
-            Book
-        </PersonalSidebarLayout>
-    )
+function Book({}: Props) {
+  return <PersonalSidebarLayout>Book</PersonalSidebarLayout>;
 }
 
-export default Book
+export default Book;

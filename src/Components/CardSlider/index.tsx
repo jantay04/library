@@ -1,10 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import gg from "../MainSectoins/assets/1tabletman.svg";
 import "../../style/Slider.css";
 import Card from "../Card";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 type Props = {};
 
@@ -40,7 +41,7 @@ const MainSlider = ({}: Props) => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          className: "ml-24 ",
+          className: "ml-10 ",
         },
       },
       {
