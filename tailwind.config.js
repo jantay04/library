@@ -7,6 +7,9 @@ module.exports = {
         bottom: "0px 4px 4px rgb(0,0,0,25%)",
       },
       width: {
+        aa10: "5vmax",
+        500: "28vmax",
+        700: "35vmax",
         86: "83.1111111%",
         95: "85%",
         610: "35vmax",
@@ -21,12 +24,17 @@ module.exports = {
         gray2ForGradient: "#F7F8FA",
       },
       minWidth: {
+        xl: "1220px",
         lg: "1024px",
+        mdd: "768px",
         md: "425px",
         sm: "375px",
       },
       maxWidth: {
         lgg: "1024px",
+      },
+      margin: {
+        aa10: "5vmax",
       },
     },
   },
