@@ -43,7 +43,7 @@ const Card = (props: Props) => {
                 `${value} Star${value !== 1 ? "s" : ""}`
               }
               precision={0.5}
-              readOnly
+              // readOnly
             />
             <button className="mr-2" onClick={() => setLike(!isLike)}>
               {isLike ? (
@@ -53,13 +53,12 @@ const Card = (props: Props) => {
               )}
             </button>
           </div>
+          <h3 className="text-ourBlue font-bold">
+            Пиши, сокращай
+            <br />
+            М. Ильяхов, Л. Сарычена
+          </h3>
         </div>
-
-        <h3 className="text-ourBlue font-bold">
-          Пиши, сокращай
-          <br />
-          М. Ильяхов, Л. Сарычена
-        </h3>
       </div>
     </div>
   );

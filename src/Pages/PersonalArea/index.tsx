@@ -4,7 +4,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import HistoryIcon from "@mui/icons-material/History";
 import Profile from "./Profile";
-import PersonalSidebarLayout from "../../Components/PersonalAreaLayout";
+import PersonalSidebarLayout from "../../Components/Layout/PersonalAreaLayout";
 
 type Props = {};
 

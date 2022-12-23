@@ -6,9 +6,7 @@ import ResetPassword from './ResetPassword';
 type Props = {}
 
 function LoginAndRegister({}: Props) {
-  const [formType, setFormType] = useState<"login" | "register" | "resetPassword">("login");
-
-
+  const [formType, setFormType] = useState<"login" | "register" | "resetPassword" | "Hamburger">("login");
   return (
     <>
       {formType == "login" && <Login setFormType={setFormType} />}

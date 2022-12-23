@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
-import LoginAndRegister from "../../../LoginAndRegister";
+import LoginAndRegister from "../../../../LoginAndRegister";
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from "@mui/material/IconButton/IconButton";
 

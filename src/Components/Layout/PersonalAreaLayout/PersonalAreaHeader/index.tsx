@@ -1,11 +1,13 @@
 import IconButton from '@mui/material/IconButton/IconButton'
-import React from 'react'
-import SearchHeader from '../../UI/SearchHeader'
+import React, { useState } from 'react'
+import SearchHeader from '../../../UI/SearchHeader'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Badge from '@mui/material/Badge/Badge';
 import styled from '@emotion/styled';
-import { Avatar } from '@mui/material';
+import { Avatar, Drawer } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import PersonalAreaSidebar from '../PersonalAreaSidebar';
 
 type Props = {}
 
@@ -37,10 +39,31 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     },
 }));
 
+
 function PersonalAreaHeader({ }: Props) {
+    const [openHamburger, setOpenHamburger] = useState(false)
+
+    function closeHamburger() {
+        setOpenHamburger(false)
+    }
+
     return (
         <div className='flex items-center justify-between w-full pb-[30px] border-b'>
-            <SearchHeader />
+            <div className='flex max-md:hidden'>
+                <SearchHeader />
+            </div>
+            <div className="md:hidden">
+                <IconButton aria-label="delete" size="large" onClick={() => setOpenHamburger(true)}>
+                    <MenuIcon />
+                </IconButton>
+                <Drawer
+                    anchor='left'
+                    open={openHamburger}
+                    onClose={closeHamburger}
+                >
+                    <PersonalAreaSidebar/>
+                </Drawer>
+            </div>
             <div className='flex items-center gap-2'>
                 <IconButton
                     size="large"

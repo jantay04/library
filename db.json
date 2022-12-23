@@ -1,0 +1,10 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "name": "Пиши, сокращай",
+            "author": "М. Ильяхов, Л. Сарычена",
+            "imageUrl": "./booksAssets/book.jpeg"
+        }
+    ]
+}

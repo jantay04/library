@@ -1,14 +1,14 @@
 import Button from '@mui/material/Button/Button'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PersonalSidebarLayout from '../../../Components/PersonalAreaLayout'
+import PersonalSidebarLayout from '../../../Components/Layout/PersonalAreaLayout'
 
 type Props = {}
 
 function Exit({ }: Props) {
     return (
         <PersonalSidebarLayout>
-            <div className='w-full h-[80vh] flex border justify-center items-center flex-col'>
+            <div className='w-full h-[80vh] flex  justify-center items-center flex-col'>
                 <div className='grid gap-2 text-center'>
                     <h2 className='text-xl font-semibold'>Уже уходите?</h2>
                     <p>а мы скучаем :(</p>

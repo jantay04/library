@@ -14,6 +14,7 @@ const MainSlider = ({}: Props) => {
     slidesToShow: 6,
     infinite: true,
     speed: 500,
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 1920,

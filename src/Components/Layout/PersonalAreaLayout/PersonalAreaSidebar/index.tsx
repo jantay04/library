@@ -1,5 +1,5 @@
 import React from 'react'
-import logoSvg from '../../assets/logo.svg'
+import logoSvg from '../../../assets/logo.svg'
 import settingsIcon from '../assets/settings.svg'
 import bookIcon from '../assets/book.svg'
 import booksIcon from '../assets/books.svg'
@@ -96,8 +96,8 @@ function PersonalAreaSidebar({ }: Props) {
     }
 
     return (
-        <div className="p-[40px] border-r flex flex-col">
-            <div className="border-b pb-[40px] flex justify-center items-center">
+        <div className="max-md:w-screen1/2 p-[20px] md:p-[40px] border-r flex flex-col">
+            <div className="border-b pb-[50px] flex justify-center items-center">
                 <Link to={'/personalarea'}>
                     <img src={logoSvg} alt="logo" className="h-[18px]" />
                 </Link>
@@ -108,7 +108,6 @@ function PersonalAreaSidebar({ }: Props) {
                         <NavbarLink tittle={item.tittle} icon={item.icon} url={item.url} />
                     ))}
                 </div>
-
                 <div>
                     {sidebarLinks && sidebarLinks.filter(item => item.position == "bottom").map((item) => (
                         <NavbarLink tittle={item.tittle} icon={item.icon} url={item.url} />

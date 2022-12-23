@@ -1,17 +1,12 @@
-import React, { useEffect,useRef, useState } from 'react'
-import {
-  Formik,
-  FormikHelpers,
-  FormikProps,
-  Form,
-  Field,
-  FieldProps,
-} from 'formik';
+import React, { useEffect, useRef, useState } from 'react'
 import ModalHeading from '../ModalHeading'
-import TextField from '@mui/material/TextField/TextField';
 import Button, { ButtonProps } from '@mui/material/Button/Button';
 import { Link } from 'react-router-dom';
 import mailSvg from './assets/mail.svg'
+import FormField from '../../UI/FormField';
+import { useForm, FormProvider } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup';
+import { ResetFormSchema } from '../../../utils/validations';
 
 type Props = {
   setFormType: any
@@ -36,52 +31,51 @@ function ResetPassword({ setFormType }: Props) {
 
   const [counter, setCounter] = useState(60);
 
-  
+
   // useEffect(() => {
   //   counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   // }, [counter])
 
   const isFirstRun = useRef(true);
 
-  useEffect (() => {
+  useEffect(() => {
     if (isFirstRun.current) {
       isFirstRun.current = true;
       counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     }
+
     if (counter == 0) {
+      setCounter(60)
       setConfirmation(false)
     }
-    
+
   }, [counter]);
 
+
+  const form = useForm({
+    mode: 'onChange',
+    resolver: yupResolver(ResetFormSchema)
+  });
+
+  const onSubmit = () => {
+    // data => console.log(data)
+    setConfirmation(true)
+  };
+
   return (
-    <div className='w-[320px] pb-[150px]'>
+    <div className='md:w-[320px] pb-[150px]'>
       <ModalHeading>Восстановление доступа</ModalHeading>
       {!confirmation && (
         <>
-          <p className='text-base text-center text-[#515A61] mt-11'>Забыли пароль? Введите свой адрес электронной почты и мы вышлем вам инструкцию по восстановлению пароля  </p>
-          <Formik
-            initialValues={initialValues}
-            onSubmit={(values, actions) => {
-              // console.log({ values, actions });
-              // alert(JSON.stringify(values, null, 2));
-              // actions.setSubmitting(false);
-              setConfirmation(true)
-            }}
-          >
-            <Form className='flex gap-[20px] flex-col mt-11'>
-              <TextField
-                id="mail"
-                label="Введите почту"
-                variant="outlined"
-                color="secondary"
-                size="small"
-              />
+          <p className='text-base text-center text-[#515A61]'>Забыли пароль? Введите свой адрес электронной почты и мы вышлем вам инструкцию по восстановлению пароля  </p>
+          <FormProvider {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className='flex gap-[20px] flex-col mt-11'>
+              <FormField label='Введите почту' name='email' />
               <Button type="submit" color="secondary" variant="contained" sx={{ textTransform: "capitalize", borderRadius: 2, height: '50px' }} >
                 <p className='font-semibold text-base'>Отправить</p>
               </Button>
-            </Form>
-          </Formik>
+            </form>
+          </FormProvider>
         </>
       )}
       {confirmation && (
@@ -93,7 +87,7 @@ function ResetPassword({ setFormType }: Props) {
           </div>
         </>
       )}
-    </div>
+    </div >
   )
 }
 

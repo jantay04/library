@@ -1,12 +1,13 @@
 import React from 'react'
-import PersonalSidebarLayout from '../../../Components/PersonalAreaLayout'
+import PersonalSidebarLayout from '../../../Components/Layout/PersonalAreaLayout'
+import SettingsProfileForm from '../Profile/SettingsProfileForm'
 
 type Props = {}
 
 function Settings({ }: Props) {
     return (
         <PersonalSidebarLayout>
-            Настройки
+           <SettingsProfileForm/>
         </PersonalSidebarLayout>
     )
 }

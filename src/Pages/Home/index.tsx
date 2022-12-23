@@ -7,8 +7,8 @@ type Props = {};
 function Home({}: Props) {
   return (
     <MainLayout>
-      <MainSections />
-      <CardSlider />
+      {/* <MainSections /> */}
+      {/* <CardSlider /> */}
     </MainLayout>
   );
 }

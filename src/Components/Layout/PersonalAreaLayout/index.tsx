@@ -1,0 +1,35 @@
+import React, { Children } from 'react'
+import PersonalAreaHeader from './PersonalAreaHeader';
+import PersonalAreaSidebar from './PersonalAreaSidebar';
+import style from './style.module.scss'
+
+type Props = {
+    children: React.ReactNode;
+}
+
+function Sidebar({ children }: Props) {
+
+    return (
+        <div className={` ${style.personalAreaLayout}`}>
+            <div className={`${style.sidebar}`}>
+                <div className='max-md:hidden'>
+                    <div className='fixed flex h-screen'>
+                        <PersonalAreaSidebar />
+                    </div>
+                </div>
+            </div>
+            <div className={`${style.header} `}>
+                <div className='py-[30px] px-[40px] w-full'>
+                    <PersonalAreaHeader />
+                </div>
+            </div>
+            <div className={`${style.mainContent}`}>
+                <div className='py-[30px] px-[40px] mt-[40px] h-[calc(100%-40px)]'>
+                    {children}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Sidebar
