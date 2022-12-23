@@ -29,10 +29,10 @@ const Card = ({ small }: Props) => {
 
   // const [small, setSmall] = useState(false);
   return (
-    <div className="flex justify-center w-full mr-16">
+    <div className="flex justify-center w-1/2 mr-16 ">
       {small ? (
-        <div>
-          <div className="flex flex-col justify-between h-auto w-min ml-3 mr-3 ">
+        <div className="">
+          <div className="flex flex-col justify-between h-auto w-min ml-3 mr-3  b">
             <img className="mr-0 w-36 h-auto" src={book} alt="" />
             <div className="flex justify-between  w-36 items-center ">
               <StyledRating
@@ -63,7 +63,7 @@ const Card = ({ small }: Props) => {
         </div>
       ) : (
         <div className="">
-          <div className="flex flex-col justify-between h-auto w-52  ">
+          <div className="flex flex-col justify-evenly h-auto w-52  ">
             <img className="mr-0" src={book} alt="" />
             <div className="flex justify-between">
               <StyledRating

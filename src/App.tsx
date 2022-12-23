@@ -14,6 +14,7 @@ import Exit from "./Pages/PersonalArea/Exit";
 import AddBooks from "./Pages/PersonalArea/MyBlogs/AddBooks";
 import Events from "./Pages/Events";
 import Review from "./Pages/Review";
+import Project from "./Pages/Projects";
 
 const theme = createTheme({
   palette: {
@@ -42,6 +43,7 @@ function App() {
           <Route path="/personalarea/exit" element={<Exit />} />
           <Route path="/events" element={<Events />} />
           <Route path="/review" element={<Review />} />
+          <Route path="/projects" element={<Project />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

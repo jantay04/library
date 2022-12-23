@@ -7,7 +7,7 @@ type Props = {};
 
 function MyBooks({}: Props) {
   // Здесь потом книги будут
-  const [personalBooks, setPersonalBooks] = useState<any | null>(false);
+  const [personalBooks, setPersonalBooks] = useState<any | null>(true);
 
   const navigate = useNavigate();
 
@@ -15,10 +15,10 @@ function MyBooks({}: Props) {
     <PersonalSidebarLayout>
       {personalBooks && personalBooks ? (
         <div className="flex justify-center  flex-col items-center">
-          <div className="flex flex-wrap justify-evenly">
-            <Card />
-            <Card />
-            <Card />
+          <div className="flex justify-evenly">
+            <Card small />
+            <Card small />
+            <Card small />
           </div>
           <div className=" text-center mt-10 mb-10">
             <h3 className="text-ourBlue font-bold text-2xl">Отлично!</h3>

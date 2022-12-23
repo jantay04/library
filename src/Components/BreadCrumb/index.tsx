@@ -27,6 +27,8 @@ export default function BreadCrumb(): any {
     case "/review":
       return setLoc("Рецензии");
       break;
+    case "/projects":
+      return setLoc("Проекты");
   }
 
   const breadcrumbs = [

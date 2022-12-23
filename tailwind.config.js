@@ -15,6 +15,7 @@ module.exports = {
         610: "35vmax",
         850: "50vmax",
         900: "80vmax",
+        700: "700px",
       },
       colors: {
         bejeviy: "#FEF7E8",
@@ -24,6 +25,7 @@ module.exports = {
         gray2ForGradient: "#F7F8FA",
       },
       minWidth: {
+        xxl: "1314px",
         xl: "1220px",
         lg: "1024px",
         mdd: "768px",

@@ -19,7 +19,7 @@ const MainSlider = ({}: Props) => {
       {
         breakpoint: 1920,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: 5,
           className: "ml-44 ",
         },
       },
@@ -27,6 +27,13 @@ const MainSlider = ({}: Props) => {
         breakpoint: 1440,
         settings: {
           slidesToShow: 5,
+          className: "ml-32 ",
+        },
+      },
+      {
+        breakpoint: 1314,
+        settings: {
+          slidesToShow: 4,
           className: "ml-32 ",
         },
       },
@@ -82,17 +89,17 @@ const MainSlider = ({}: Props) => {
     ],
   };
   return (
-    <div className="mb-10 ">
+    <div className="mb-10 -ml-36 ">
       <Slider {...settings}>
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </Slider>
     </div>
   );

@@ -34,7 +34,7 @@ function Footer({}: Props) {
             <Link to="/">Аудиокниги</Link>
             <Link to="/">Блог</Link>
             <Link to="/">Группы</Link>
-            <Link to="/">Проекты</Link>
+            <Link to="/projects">Проекты</Link>
             <Link to="/review">Рецензии</Link>
             <Link to="/events">Мероприятия</Link>
           </div>
