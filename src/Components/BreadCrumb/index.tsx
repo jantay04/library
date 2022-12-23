@@ -23,9 +23,23 @@ export default function BreadCrumb(): any {
     case "/events":
       return setLoc("Мероприятия");
       break;
-
     case "/review":
       return setLoc("Рецензии");
+      break;
+    case "/aboutus":
+      return setLoc("О Нас");
+      break;
+    case "/law":
+      return setLoc("Все права защищены");
+      break;
+    case "/privacypolicy":
+      return setLoc("Политика конфиденциальности");
+      break;
+    case "/publicoffer":
+      return setLoc("Публичная оферта");
+      break;
+    case "/contacts":
+      return setLoc("Контакты");
       break;
   }
 
@@ -51,7 +65,7 @@ export default function BreadCrumb(): any {
 
   // console.log(location);
   return (
-    <Stack spacing={2} className="mt-2  ml-5">
+    <Stack spacing={2} className="mt-2">
       <Breadcrumbs
         separator={
           <NavigateNextIcon fontSize="small" className="text-ourOrange" />

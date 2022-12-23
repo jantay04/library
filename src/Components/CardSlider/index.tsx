@@ -84,15 +84,15 @@ const MainSlider = ({}: Props) => {
   return (
     <div className="mb-10 ">
       <Slider {...settings}>
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
-        <Card small />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </Slider>
     </div>
   );

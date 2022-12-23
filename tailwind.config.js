@@ -35,6 +35,7 @@ module.exports = {
       },
       margin: {
         aa10: "5vmax",
+        aa20: "9vmax",
       },
     },
   },

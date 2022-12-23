@@ -29,7 +29,7 @@ function Footer({}: Props) {
             </p>
           </div>
           <div className="grid gap-3 text-[#1D324E] text-base font-medium leading-5">
-            <Link to="/">О нас </Link>
+            <Link to="/aboutus">О нас </Link>
             <Link to="/">Библиотека</Link>
             <Link to="/">Аудиокниги</Link>
             <Link to="/">Блог</Link>
@@ -65,8 +65,10 @@ function Footer({}: Props) {
           </div>
         </div>
         <p className="mt-[60px]">
-          ©️ 2022 Your books. Все права защищены | Публичная оферта | Политика
-          конфиденциальности
+          ©️ 2022 Your books.
+          <Link to="/law"> Все права защищены</Link> |
+          <Link to="/publicoffer"> Публичная оферта</Link> |
+          <Link to="/privacypolicy"> Политика конфиденциальности</Link>
         </p>
       </div>
     </div>

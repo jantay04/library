@@ -20,12 +20,11 @@ const linksLists = [
   {
     id: 3,
     tittle: "Контакты",
-    url: "/contact",
+    url: "/contacts",
   },
 ];
 
-function Header({ }: Props) {
-
+function Header({}: Props) {
   let [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -35,24 +34,25 @@ function Header({ }: Props) {
           <Link to="/">
             <img src={logoSvg} alt="logo" className="h-5" />
           </Link>
-          <SearchHeader/>
+          <SearchHeader />
           <div className="flex gap-4 ">
             {linksLists &&
               linksLists.map((item) => (
                 <Link
                   to={item.url}
-                  className="font-semibold p-1 border-b border-black/0  hover:border-b  hover:border-[#FF7F2C] hover:text-[#FF7F2C] ease-in-out duration-200"
-                >
+                  className="font-semibold p-1 border-b border-black/0  hover:border-b  hover:border-[#FF7F2C] hover:text-[#FF7F2C] ease-in-out duration-200">
                   {item.tittle}
                 </Link>
               ))}
           </div>
-          <button onClick={() => setIsOpen(true)} className="bg-[#FF7F2C] py-2 px-4 rounded text-white font-semibold shadow-lg hover:bg-[#f96807] ease-in-out duration-200">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="bg-[#FF7F2C] py-2 px-4 rounded text-white font-semibold shadow-lg hover:bg-[#f96807] ease-in-out duration-200">
             Войти
           </button>
         </div>
       </div>
-      <HeaderModal  isOpen={isOpen}  setIsOpen={setIsOpen}  />
+      <HeaderModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 }
