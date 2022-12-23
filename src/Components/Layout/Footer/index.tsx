@@ -29,11 +29,14 @@ function Footer({}: Props) {
             </p>
           </div>
           <div className="grid gap-3 text-[#1D324E] text-base font-medium leading-5">
+            <Link to="/">О нас </Link>
             <Link to="/">Библиотека</Link>
             <Link to="/">Аудиокниги</Link>
             <Link to="/">Блог</Link>
             <Link to="/">Группы</Link>
             <Link to="/">Проекты</Link>
+            <Link to="/review">Рецензии</Link>
+            <Link to="/events">Мероприятия</Link>
           </div>
           <div className="grid text-[#1D324E] text-base font-medium leading-5">
             <ul className="grid gap-4">

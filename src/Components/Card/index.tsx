@@ -11,9 +11,11 @@ import Like from "../Card/assets/like.svg";
 import LikeFill from "../Card/assets/like-svg.svg";
 import MyBlogs from "../../Pages/PersonalArea/MyBooks";
 
-type Props = {};
+type Props = {
+  small?: boolean;
+};
 
-const Card = (props: Props) => {
+const Card = ({ small }: Props) => {
   const StyledRating = styled(Rating)({
     "& .MuiRating-iconFilled": {
       color: "#FFAA73",
@@ -25,14 +27,14 @@ const Card = (props: Props) => {
 
   let [isLike, setLike] = useState(false);
 
-  const [small, setSmall] = useState(true);
+  // const [small, setSmall] = useState(false);
   return (
-    <div>
+    <div className="flex justify-center w-full mr-16">
       {small ? (
         <div>
           <div className="flex flex-col justify-between h-auto w-min ml-3 mr-3 ">
             <img className="mr-0 w-36 h-auto" src={book} alt="" />
-            <div className="flex justify-between   w-36 items-center">
+            <div className="flex justify-between  w-36 items-center ">
               <StyledRating
                 className="mt-2 "
                 name="customized-color"
@@ -60,8 +62,8 @@ const Card = (props: Props) => {
           </h3>
         </div>
       ) : (
-        <div>
-          <div className="flex flex-col justify-between h-auto w-52">
+        <div className="">
+          <div className="flex flex-col justify-between h-auto w-52  ">
             <img className="mr-0" src={book} alt="" />
             <div className="flex justify-between">
               <StyledRating
