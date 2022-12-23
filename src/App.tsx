@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Home from "./Pages/Home";
 import PersonalArea from "./Pages/PersonalArea";
 import Settings from "./Pages/PersonalArea/Settings";
@@ -11,17 +11,16 @@ import WriteBooks from "./Pages/PersonalArea/WriteBook";
 import MyBlogs from "./Pages/PersonalArea/MyBooks";
 import MyBooks from "./Pages/PersonalArea/MyBlogs";
 import Exit from "./Pages/PersonalArea/Exit";
-
+import BooksContextProvider from "./Components/Contexts/BooksContextProvider";
 
 const theme = createTheme({
   palette: {
     secondary: {
-      main: '#FF7F2C',
-      contrastText: "#fff" 
+      main: "#FF7F2C",
+      contrastText: "#fff",
     },
   },
 });
-
 
 function App() {
   return (
