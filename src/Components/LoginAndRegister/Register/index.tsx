@@ -49,7 +49,7 @@ function Register({ setFormType }: Props) {
 
       <FormProvider {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col justify-between h-[calc(100%-100px)]'>
-          <div className='flex gap-[14px] flex-col'>
+          <div className='flex  flex-col'>
             <FormField label='Введите почту' name='email' />
             <FormField label='Введите пароль' name='password' />
             <FormField label='Повторите пароль' name='password' />

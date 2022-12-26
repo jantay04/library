@@ -69,7 +69,7 @@ function ResetPassword({ setFormType }: Props) {
         <>
           <p className='text-base text-center text-[#515A61]'>Забыли пароль? Введите свой адрес электронной почты и мы вышлем вам инструкцию по восстановлению пароля  </p>
           <FormProvider {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className='flex gap-[20px] flex-col mt-11'>
+            <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col mt-11'>
               <FormField label='Введите почту' name='email' />
               <Button type="submit" color="secondary" variant="contained" sx={{ textTransform: "capitalize", borderRadius: 2, height: '50px' }} >
                 <p className='font-semibold text-base'>Отправить</p>

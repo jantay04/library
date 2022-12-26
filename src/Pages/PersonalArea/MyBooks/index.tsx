@@ -1,14 +1,10 @@
-import React from 'react'
-import PersonalSidebarLayout from '../../../Components/Layout/PersonalAreaLayout'
+import React from "react";
+import PersonalSidebarLayout from "../../../Components/Layout/PersonalAreaLayout";
 
-type Props = {}
+type Props = {};
 
-function MyBlogs({ }: Props) {
-    return (
-        <PersonalSidebarLayout>
-            MyBlogs
-        </PersonalSidebarLayout>
-    )
+function MyBlogs({}: Props) {
+  return <PersonalSidebarLayout>fge</PersonalSidebarLayout>;
 }
 
-export default MyBlogs
+export default MyBlogs;

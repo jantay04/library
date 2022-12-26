@@ -1,8 +1,9 @@
-import React from 'react'
-import PersonalSidebarLayout from '../../../Components/Layout/PersonalAreaLayout'
 import SettingsProfileForm from '../Profile/SettingsProfileForm'
+import React from "react";
+import small from "../";
+import PersonalSidebarLayout from '../../../Components/Layout/PersonalAreaLayout'
 
-type Props = {}
+type Props = {};
 
 function Settings({ }: Props) {
     return (
@@ -12,4 +13,4 @@ function Settings({ }: Props) {
     )
 }
 
-export default Settings
+export default Settings;

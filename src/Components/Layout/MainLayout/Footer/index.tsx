@@ -1,12 +1,12 @@
 import IconButton from '@mui/material/IconButton/IconButton'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logoSvg from '../../../assets/logo.svg'
-import instagramSvg from './assets/instagram.svg'
-import telegramSvg from './assets/telegram.svg'
-import vkSvg from './assets/vk.svg'
+import React from "react";
+import { Link } from "react-router-dom";
+import logoSvg from "../../../assets/logo.svg";
+import instagramSvg from "./assets/instagram.svg";
+import telegramSvg from "./assets/telegram.svg";
+import vkSvg from "./assets/vk.svg";
 
-type Props = {}
+type Props = {};
 
 function Footer({ }: Props) {
   return (
@@ -53,10 +53,18 @@ function Footer({ }: Props) {
             </div>
           </div>
         </div>
-        <p className='mt-[60px]'>©️ 2022 Your books. Все права защищены | Публичная оферта | Политика конфиденциальности</p>
+        <div className='md:flex flex-wrap text-[#1D324E] mt-10'>
+          <p className='mr-2'>© 2022 Your books. </p>
+          <ul className='md:flex'>
+            <li className='md:border-r border-[#1D324E] pr-2 mr-2'>Все права защищены</li>
+            <li className='md:border-r border-[#1D324E] pr-2 mr-2'>Публичная оферта </li>
+            <li className=' pr-2 mr-2'>Политика конфиденциальности</li>
+          </ul>
+        </div>
+
       </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

@@ -2,12 +2,9 @@ import { TextField, Button, Box } from "@mui/material";
 import React, { useRef, useState } from "react";
 import { useForm, FormProvider } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from "yup";
 import { PersonalAreaFormSchema } from "../../../../utils/validations";
 import FormField from "../../../../Components/UI/FormField";
 import avatar from '../assets/profile.png'
-import IconButton from '@mui/material/IconButton';
-import { type } from "@testing-library/user-event/dist/type";
 
 type Props = {};
 

@@ -19,12 +19,12 @@ function Sidebar({ children }: Props) {
                 </div>
             </div>
             <div className={`${style.header} `}>
-                <div className='py-[30px] px-[40px] w-full'>
+                <div className='p-[20px] sm:py-[30px]  sm:px-[40px] w-full'>
                     <PersonalAreaHeader />
                 </div>
             </div>
             <div className={`${style.mainContent}`}>
-                <div className='py-[30px] px-[40px] mt-[40px] h-[calc(100%-40px)]'>
+                <div className='p-[20px] sm:py-[30px]  sm:px-[40px] mt-[40px] h-[calc(100%-40px)]'>
                     {children}
                 </div>
             </div>

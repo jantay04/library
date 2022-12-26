@@ -1,58 +1,66 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
+import IconButton from '@mui/material/IconButton/IconButton';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Link } from 'react-router-dom';
 type Props = {
-    bookUrl: any,
-    name: string,
-    author: string
+  id: number,
+  bookUrl: any,
+  name: string,
+  author: string,
+  rating: number,
 }
 
 
-function BookCard({ bookUrl, name, author}: Props) {
+function BookCard({ bookUrl, name, author, rating, id }: Props) {
 
-    const StyledRating = styled(Rating)({
-        "& .MuiRating-iconFilled": {
-            color: "#FFAA73",
-        },
-        "& .MuiRating-iconHover": {
-            color: "#FF7F2C",
-        },
-    });
+  const StyledRating = styled(Rating)({
+    "& .MuiRating-iconFilled": {
+      color: "#FF7F2C",
+    },
+    "& .MuiRating-iconHover": {
+      color: "#FF7F2C",
+    },
+  });
 
-    let [isLike, setLike] = useState(false);
+  let [isLike, setLike] = useState(false);
 
-    return (
-        <div className="flex flex-col justify-between h-auto w-52">
-            <img className="mr-0" src={bookUrl} alt="" />
-            <div className="flex justify-between">
-                <StyledRating
-                    className="mt-2"
-                    name="customized-color"
-                    defaultValue={2}
-                    getLabelText={(value: number) =>
-                        `${value} Star${value !== 1 ? "s" : ""}`
-                    }
-                    precision={0.5}
-                // readOnly
-                />
-                {/* <button className="mr-2" onClick={() => setLike(!isLike)}>
-                    {isLike ? (
-                        <img src={LikeFill} alt="" />
-                    ) : (
-                        <img src={Like} alt="" />
-                    )}
-                </button> */}
-            </div>
-            <div className='text-ourBlue font-bold'>
-                <p>{name}</p>
-                <p>{author}</p>
-            </div>
-        </div>
-    )
+  console.log(bookUrl)
+
+  return (<>
+
+    <div className="flex flex-col justify-between ">
+      <Link to={`${id}`}>
+        <img className="rounded-lg w-[200px] h-[270px] object-cover " src={bookUrl} alt="book" />
+      </Link>
+      <div className="flex justify-between">
+        <StyledRating
+          className="mt-2"
+          defaultValue={rating}
+          readOnly
+        />
+
+        <button className=" translate-x-1 translate-y-1" onClick={() => setLike(!isLike)}>
+          {isLike ? (
+            <IconButton size="small">
+              <FavoriteBorderIcon style={{ color: 'red' }} />
+            </IconButton>
+          ) : (
+            <IconButton size="small">
+              <FavoriteIcon style={{ color: 'red' }} />
+            </IconButton>
+          )}
+        </button>
+      </div>
+      <div className='text-ourBlue text-sm font-semibold'>
+        <p>{name}</p>
+        <p>{author}</p>
+      </div>
+    </div>
+  </>
+  )
 }
 
 export default BookCard
-
-function useState(arg0: boolean): [any, any] {
-    throw new Error('Function not implemented.');
-}

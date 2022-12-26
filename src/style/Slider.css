@@ -1,8 +1,8 @@
-.slick-arrow {
-  display: none !important;
+.slick-slider {
+  margin:0 -10px;
 }
-
 .slick-slide {
-  padding-left: 0;
-  margin-right: 0;
+  padding:10px;
+  /* margin-right:15px; */
+  /* margin-left:15px; */
 }

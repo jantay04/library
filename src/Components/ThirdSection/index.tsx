@@ -61,7 +61,7 @@ const index = (props: Props) => {
     ],
   };
   return (
-    <div className="xl:ml-44 lg:ml-24 mt-24">
+    <div className="max-w-7xl mx-auto p-4 mt-24">
       <h2 className="text-ourBlue font-bold text-xl">
         Блоги читателей и авторов
       </h2>

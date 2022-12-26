@@ -4,7 +4,7 @@ import PersonalSidebarLayout from '../../../Components/Layout/PersonalAreaLayout
 import PersonalBodyHeading from '../../../Components/UI/PersonalBodyHeading'
 import TrackerCard from './TrackerCard'
 
-type Props = {}
+type Props = {};
 
 const TrackerCardObj = [
     {
@@ -1586,10 +1586,8 @@ function Book({ }: Props) {
                     </div>
                 </div>
             }
-
-
         </PersonalSidebarLayout>
     )
 }
 
-export default Book
+export default Book;

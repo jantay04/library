@@ -1,0 +1,18 @@
+/* .img {
+  position: absolute;
+  right: 24rem;
+  width: 50px;
+  top: 13rem;
+  z-index: 23123;
+} */
+.input {
+  display: none !important;
+  background-color: royalblue;
+}
+.label {
+  cursor: pointe !important;
+}
+AddImg {
+  width: 30px !important;
+  height: 30px !important;
+}
