@@ -41,6 +41,9 @@ export default function BreadCrumb(): any {
     case "/contacts":
       return setLoc("Контакты");
       break;
+    case "/projects":
+      return setLoc("Проекты");
+      break;
     case "/library":
       return setLoc("Библиотека");
       break;

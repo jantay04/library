@@ -56,6 +56,11 @@ const linksLists = [
         tittle: "Публичная оферта",
         url: "/publicoffer"
       },
+      {
+        id: 4,
+        tittle: "Проекты",
+        url: "/projects"
+      },
     ],
   },
 ];

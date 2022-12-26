@@ -26,6 +26,7 @@ import PrivacyPolicy from "./Pages/Contacts/PrivacyPolicy";
 import PublicOffer from "./Pages/Contacts/PublicOffer";
 import Library from "./Pages/Library";
 import BookPage from "./Pages/Library/BookPage";
+import Project from "./Pages/Projects";
 
 const theme = createTheme({
   palette: {
@@ -61,6 +62,8 @@ function App() {
           <Route path="/law" element={<Law />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/publicoffer" element={<PublicOffer />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/projects" element={<Project />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
